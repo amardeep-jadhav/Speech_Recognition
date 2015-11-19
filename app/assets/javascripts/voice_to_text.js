@@ -11,6 +11,17 @@ var info_denied = 'Permission to use microphone was denied.';
 var info_blocked = 'Permission to use microphone is blocked. To change, go to chrome://settings/contentExceptions#media-stream';
 var info_upgrade = 'Not supported by this browser. Upgrade to Chrome version 25 or later.';
 
+function tovoice (argument) {
+     var msg = document.getElementById('final_span').value
+     var language = document.getElementById('Language').value
+    
+    // speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
+    var utterance = new SpeechSynthesisUtterance(msg);
+    utterance.lang = language;
+    alert(utterance.lang);
+    window.speechSynthesis.speak(utterance);
+  }
+
 if (!('webkitSpeechRecognition' in window)) {
   upgrade();
 } else {
@@ -109,8 +120,9 @@ function startButton(event) {
     recognition.stop();
     return;
   }
+  var language = document.getElementById('Language').value
   final_transcript = '';
-  recognition.lang = 'en';
+  recognition.lang = language;
   recognition.start();
   ignore_onend = false;
   final_span.innerHTML = '';

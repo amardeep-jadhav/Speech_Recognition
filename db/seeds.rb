@@ -3,5 +3,57 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }"],)
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+language_list = [
+                  ["Afrikaans", "af-ZA"],
+                  ["Bahasa Indonesia", "id-ID"],
+                  ["Català", "ca-ES"],
+                  ["Čeština", "cs-CZ"],
+                  ["Dansk", "da-DK"],
+                  ["Deutsch", "de-DE"],
+                  ["English", "en-US"],
+                  ["Español", "es-AR"],
+                  ["Euskara", "eu-ES"],
+                  ["Filipino", "fil-PH"],
+                  ["Français", "fr-FR"],
+                  ["Galego", "gl-ES"],
+                  ["German", "de-DE"],
+                  ["Hrvatski", "hr_HR"],
+                  ["IsiZulu", "zu-ZA"],
+                  ["Íslenska", "is-IS"],
+                  ["Italiano", "it-IT"],
+                  ["Japanese", "ja"],
+                  ["Korean", "ko"],
+                  ["Latin", "la"],
+                  ["Lietuvių", "lt-LT"],
+                  ["Magyar", "hu-HU"],
+                  ["Nederlands", "nl-NL"],
+                  ["Norsk bokmål", "nb-NO"],
+                  ["Polski", "pl-PL"],
+                  ["Português", "pt-BR"],
+                  ["Polish", "pl"],
+                  ["Română", "ro-RO"],
+                  ["Russian", "ru"],
+                  ["Slovenščina", "sl-SI"],
+                  ["Slovenčina", "sk-SK"],
+                  ["Suomi", "fi-FI"],
+                  ["Svenska", "sv-SE"],
+                  ["Tiếng Việt", "vi-VN"],
+                  ["Türkçe", "tr-TR"],
+                  ["Ελληνικά", "el-GR"],
+                  ["български", "bg-BG"],
+                  ["Pусский", "ru-RU"],
+                  ["Српски", "sr-RS"],
+                  ["Українська", "uk-UA"],
+                  ["한국어", "ko-KR"],
+                  ["中文", "cmn-Hans-CN"],
+                  ["日本語", "ja-JP"],
+                  ["हिन्दी ", "hi-IN"],
+                  ["ภาษาไทย", "th-TH"],
+                ]
+        
+  language_list.each do |lan,code|
+    Language.create(language:lan,lan_code:code)
+  end          
