@@ -2,7 +2,7 @@
 <h3>Convert Voice to Text</h3>
 <p id="info"></p>
 <p><%= button_tag 'Start Speaking',id: "start_button", onclick: "startButton(event)",class: 'btn btn-success'%>
-<%= select_tag 'Language', options_for_select(@language.collect{ |u| [u.language,u.lan_code] }),onchange:"tovoice();"%></p>
+<%= select_tag 'Language', options_for_select(@language.collect{ |u| [u.language,u.lan_code] }),onchange:"tovoice();",:prompt => 'Select Language'%></p>
 <p><%= text_area_tag :final_span,nil,rows: 10, cols: 50%></p>
 <%=link_to 'Text To Voice','#',onclick:"tovoice();",class: 'btn btn-success'%>
 

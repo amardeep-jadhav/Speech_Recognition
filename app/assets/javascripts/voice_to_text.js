@@ -18,7 +18,6 @@ function tovoice (argument) {
     // speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
     var utterance = new SpeechSynthesisUtterance(msg);
     utterance.lang = language;
-    alert(utterance.lang);
     window.speechSynthesis.speak(utterance);
   }
 
