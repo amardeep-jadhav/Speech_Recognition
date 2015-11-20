@@ -71,3 +71,5 @@ language_list = [
   User.create(name:'Shubham Akolkar',designation:'ROR Developer')
   User.create(name:'Sandip Vavhal',designation:'ROR Developer')
   User.create(name:'Amardeep Jadhav',designation:'ROR Developer')
+  User.create(name:'Rishi Rawat',designation:'ROR Developer')
+  User.create(name:'Rushikesh Jadhav',designation:'Paython Developer')
