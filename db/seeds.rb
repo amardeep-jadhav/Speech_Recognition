@@ -65,7 +65,7 @@ language_list = [
   User.create(name:'Amit Gurav',designation:'Senior ROR Developer')
   User.create(name:'Sumit Jain',designation:'Senior ROR Developer')
   User.create(name:'Shobhit Shukla',designation:'Senior ROR Developer')
-  User.create(name:'Rajil Garg',designation:'Senior ROR Developer')
+  User.create(name:'Rajul Garg',designation:'Senior ROR Developer')
   User.create(name:'Aditi Patil',designation:'Senior ROR Developer')
   User.create(name:'Ajinath Jedhe',designation:'ROR Developer')
   User.create(name:'Shubham Akolkar',designation:'ROR Developer')
