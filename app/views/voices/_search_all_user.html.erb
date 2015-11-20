@@ -1,0 +1,33 @@
+
+
+
+<% if @user.nil? %>
+ <h4 align="center">No Record Found </h4>
+   <% else %>
+<% if @user.empty? || @user.blank?%>
+ <h4 align="center">No Record Found </h4>
+   <% else %>
+ <div class="col-md-5"></div>
+<table id="datatable" class="table">
+
+      <thead>
+      <tr>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Department</th>
+      </tr>
+       </thead>
+       <tbody>
+      <%@user.each do |user|%>
+       
+          <tr>
+                <td col-md-2><%= user.id%></td>
+                <td col-md-2><%= user.name%></td>
+                <td col-md-2><%= user.designation%></td>
+         </tr>
+      <%end%> 
+      </tbody> 
+      </table>
+  <% end %>
+  <%end%>
+</div>

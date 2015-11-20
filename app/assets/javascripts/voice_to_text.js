@@ -73,6 +73,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
   };
 
+
   recognition.onresult = function(event) {
     if (typeof(event.results) == 'undefined') {
       recognition.onend = null;
@@ -83,10 +84,12 @@ if (!('webkitSpeechRecognition' in window)) {
     for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
          final_transcript += event.results[i][0].transcript;
+
       }
     }
     final_transcript = capitalize(final_transcript);
     final_span.innerHTML = linebreak(final_transcript);
+    searchRecord();
   };
 }
 
@@ -119,12 +122,21 @@ function startButton(event) {
     recognition.stop();
     return;
   }
-  var language = document.getElementById('Language').value
-  final_transcript = '';
-  recognition.lang = language;
-  recognition.start();
-  ignore_onend = false;
-  final_span.innerHTML = '';
-  info.innerHTML = info_allow;
-  start_timestamp = event.timeStamp;
+
+    if(document.getElementById('Language'))
+    {
+      var language = document.getElementById('Language').value
+    }  
+      final_transcript = '';
+      recognition.lang = language;
+      recognition.start();
+      ignore_onend = false;
+      final_span.innerHTML = '';
+      info.innerHTML = info_allow;
+      start_timestamp = event.timeStamp;
+    
+}
+
+function searchRecord(){
+ $('#user_form').submit();
 }
