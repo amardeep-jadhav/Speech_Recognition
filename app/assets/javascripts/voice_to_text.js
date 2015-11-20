@@ -126,15 +126,24 @@ function startButton(event) {
     if(document.getElementById('Language'))
     {
       var language = document.getElementById('Language').value
-    }  
-      final_transcript = '';
       recognition.lang = language;
+      final_transcript = '';
       recognition.start();
       ignore_onend = false;
       final_span.innerHTML = '';
       info.innerHTML = info_allow;
       start_timestamp = event.timeStamp;
-    
+    }  
+    else
+    {
+      final_transcript = '';
+      recognition.lang = 'en-US';
+      recognition.start();
+      ignore_onend = false;
+      final_span.innerHTML = '';
+      info.innerHTML = info_allow;
+      start_timestamp = event.timeStamp;
+    }
 }
 
 function searchRecord(){
